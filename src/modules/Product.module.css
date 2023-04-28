@@ -18,12 +18,14 @@
     background-color: black;
     width: fit-content;
     font-size: 1.4rem;
+    padding: 0.8rem;
 }
 
 .price-tag p{
     color: white;
     background-color: black;
     width: fit-content;
+    padding: 0.4rem;
 }
 
 .product img:hover {
