@@ -1,10 +1,15 @@
-import
+import Footer from "./components/Footer"
+import Header from "./components/Header"
+import Hero from "./components/Hero"
+import "./modules/App.module.css"
 
-const App = () {
+function App() {
 
   return (
     <>
-     <h1>APP</h1>
+     <Header />
+     <Hero />
+     <Footer />
     </>
   )
 }

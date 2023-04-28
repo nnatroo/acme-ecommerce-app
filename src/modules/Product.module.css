@@ -1,0 +1,31 @@
+.product {
+    background-color: #171717;
+    overflow: hidden;
+}
+
+.product img {
+    height: 100%;
+    transition: 0.2s;
+    max-width: 100%;
+}
+
+.price-tag {
+    position: absolute;
+}
+
+.price-tag h3{
+    color: white;
+    background-color: black;
+    width: fit-content;
+    font-size: 1.4rem;
+}
+
+.price-tag p{
+    color: white;
+    background-color: black;
+    width: fit-content;
+}
+
+.product img:hover {
+    transform: scale(1.1);
+}

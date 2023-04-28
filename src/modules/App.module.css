@@ -1,0 +1,49 @@
+body {
+    background-color: #000000;
+    font-family: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+/* ::selection{
+  background-color: #ff8e8e;
+  color: white;
+} */
+
+::-webkit-scrollbar-track
+{
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar
+{
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #7928CA;
+    ;
+}
