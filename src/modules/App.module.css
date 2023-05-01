@@ -13,10 +13,10 @@ a {
     cursor: pointer;
 }
 
-/* ::selection{
-  background-color: #ff8e8e;
+::selection{
+  background-color: #C026D3;
   color: white;
-} */
+}
 
 ::-webkit-scrollbar-track
 {

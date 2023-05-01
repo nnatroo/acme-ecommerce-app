@@ -32,6 +32,7 @@ const Footer = () => {
       <div className={classes['underfooter-section']}>
         <span>© 2023 Natroshvili Store. All rights reserved.</span>
       </div>
+      
     </div>
   );
 };
