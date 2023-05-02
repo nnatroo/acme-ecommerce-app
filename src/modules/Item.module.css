@@ -1,0 +1,85 @@
+.item-component-wrapper {
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+}
+
+.item-image-container {
+    width: 75%;
+}
+
+.item-main-image {
+    background-color: #7928CA;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    position: relative;
+}
+
+.item-main-image img {
+    width: 700px;
+    height: 700px;
+    align-self: center;
+    overflow: hidden;
+}
+
+.item-main-image h1 {
+    background-color: black;
+    width: fit-content;
+}
+
+.item-main-image h1, p {
+    padding: 14px;
+}
+
+.item-main-image-headers {
+    position: absolute;
+}
+
+.item-other-images {
+    display: flex;
+    flex-direction: row;
+    background-color: #4C2889;
+    z-index: 1;
+}
+
+.item-other-images img {
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.item-other-images img:hover {
+    transform: scale(1.05);
+    overflow: hidden;
+
+}
+
+.item-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6rem;
+    padding-inline: 1rem;
+    gap: 2rem;
+}
+
+.item-content-container span {
+    font-size: 1rem;
+}
+
+.item-content-container button {
+    background-color: white;
+    border: none;
+    padding: 20px;
+    width: 100%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.item-content-container button:hover {
+    transform: scale(1.01);
+}
