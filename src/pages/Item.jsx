@@ -1,16 +1,17 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { useParams } from "react-router-dom";
 
 const Item = (props) => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const q = urlParams.get("name");
-  console.log(window.location);
+  const { id } = useParams();
+
+  console.log(id);
 
   return (
     <>
       <Header />
-      INFO: {urlParams}
+      {/* INFO: {sku} */}
       <Footer />
     </>
   );

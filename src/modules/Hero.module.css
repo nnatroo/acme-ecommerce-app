@@ -6,7 +6,7 @@
 
 .left-col {
     background-color: #7928CA;
-    width: 70%;
+    width: 68%;
     overflow: hidden;
 }
 
@@ -32,6 +32,7 @@
     width: 100%;
     transition: 0.2s;
     z-index: 0;
+    overflow: hidden;
     
 }
 

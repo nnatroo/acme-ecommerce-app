@@ -6,7 +6,6 @@ import { Link } from "react-router-dom"
 
 const Products = (props) => {
   return (
-    
       <div className={classes["products"]}>
         {props.filteredArray.length != 0 ? (
           props.filteredArray.map((product, index) => (
@@ -14,7 +13,7 @@ const Products = (props) => {
                 name={product.name}
                 imageUrl={product.imageUrl}
                 price={product.price}
-                sku={product.sku}
+                id={product._id}
                 key={index}
               />
           ))
