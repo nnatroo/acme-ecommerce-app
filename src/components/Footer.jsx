@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import classes from "../modules/Footer.module.css";
 
 const Footer = () => {
@@ -9,8 +10,8 @@ const Footer = () => {
           <h3>Acme Store</h3>
         </a>
         <div className={classes["col-2"]}>
-          <a>Home</a>
-          <a>About</a>
+          <Link to={'/'}>Home</Link>
+          <Link to={'/about'}>About</Link>
           <a>Terms & Conditions</a>
           <a>Shipping & Return Policy</a>
         </div>

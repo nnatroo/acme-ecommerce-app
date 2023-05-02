@@ -26,8 +26,8 @@ const Header = (props) => {
             <li>
               <Link to="/search">All</Link>
             </li>
-            <li>Shirts</li>
-            <li>Stickers</li>
+            {/* <li>Shirts</li>
+            <li>Stickers</li> */}
           </ul>
         </div>
 

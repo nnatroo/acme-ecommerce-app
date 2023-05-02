@@ -36,10 +36,12 @@ body {
     cursor: pointer;
     color: #dadada;
     transition: 0.2s;
+    font-size: 1.2rem;
 }
 
 .nav-items li:hover {
     color: #fff;
+    transform: scale(1.1);
 }
 
 .middle-nav {
