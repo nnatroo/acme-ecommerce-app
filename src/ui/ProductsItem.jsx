@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 const ProductsItem = (props) => {
   return (
     <>
-      <Link to={`/${props.name}`}>
+      <Link to={`/product/sku=${props.sku}`}>
         <div className={classes["product"]}>
           <div className={classes["price-tag"]}>
             <h3>{props.name}</h3>

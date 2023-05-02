@@ -1,9 +1,13 @@
 import { useState } from "react";
 import classes from "../modules/Header.module.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const Header = (props) => {
+  const navigate = useNavigate();
+
   const changeHandler = (e) => {
+    navigate("/search");
     props.onChange(e.target.value);
   };
 
@@ -13,7 +17,7 @@ const Header = (props) => {
         <div className={classes["left-nav"]}>
           <Link to="/">
             <img
-              src="./src\assets\logoipsum-283.svg"
+              src="../../src\assets\logoipsum-283.svg"
               width={"40px"}
               alt="nav-brand"
             />
@@ -34,12 +38,12 @@ const Header = (props) => {
             value={props.search}
             onChange={changeHandler}
           />
-          <img src="./src\assets\icons8-search.svg" alt="asd" />
+          <img src="../../src\assets\icons8-search.svg" alt="asd" />
         </div>
 
         <div className={classes["right-nav"]}>
           <img
-            src="./src\assets\shopping-bag-svgrepo-com.svg"
+            src="../../src\assets\shopping-bag-svgrepo-com.svg"
             width={"30px"}
             alt="shopping-cart"
           />
