@@ -1,13 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import classes from "../../src/modules/Item.module.css";
 import { useParams } from "react-router-dom";
-
 
 const ItemComponent = () => {
   const [selectedImage, setSelecterImage] = useState(
     "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Fproducts%2Ft-shirt-spiral-1.png%3Fv%3D1682089838&w=640&q=75"
   );
+  const [itemData, setItemData] = useState({});
   const { id } = useParams();
+
+  useEffect(() => {
+    fetch(`http://localhost:3000/api/product/${id}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setItemData(data);
+        setSelecterImage(data.imageUrl)
+      })
+      .catch((error) => console.error(error));
+  }, []);
 
   const clickHandler = (e) => {
     setSelecterImage(e.target.src);
@@ -18,8 +28,8 @@ const ItemComponent = () => {
       <div className={classes["item-image-container"]}>
         <div className={classes["item-main-image"]}>
           <div className={classes["item-main-image-headers"]}>
-            <h1>Acme Rainbow Prism T-Shirt</h1>
-            <p>$25.00 USD</p>
+            <h1>{itemData.name}</h1>
+            <p>${itemData.price}.00 USD</p>
           </div>
           <img src={selectedImage} />
         </div>
@@ -47,12 +57,11 @@ const ItemComponent = () => {
         </div>
       </div>
 
-        <div className={classes['item-content-container']}>
-            <span>60% combed ringspun cotton/40% polyester jersey tee.</span>
-            <span>Product ID | {id}</span>
-            <button>ADD TO CART</button>
-        </div>
-
+      <div className={classes["item-content-container"]}>
+        <span>60% combed ringspun cotton/40% polyester jersey tee.</span>
+        <span>Product ID | {id}</span>
+        <button>ADD TO CART</button>
+      </div>
     </div>
   );
 };
