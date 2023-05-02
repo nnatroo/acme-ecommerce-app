@@ -2,6 +2,7 @@ import { useState } from "react";
 import classes from "../modules/Header.module.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
+import Cart from "../ui/Cart";
 
 const Header = (props) => {
   const navigate = useNavigate();
@@ -42,11 +43,7 @@ const Header = (props) => {
         </div>
 
         <div className={classes["right-nav"]}>
-          <img
-            src="../../src\assets\shopping-bag-svgrepo-com.svg"
-            width={"30px"}
-            alt="shopping-cart"
-          />
+          <Cart />
         </div>
       </nav>
     </>
